@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include"bioinformatics.h"
 
 main(){
@@ -30,9 +31,9 @@ main(){
 					scanf("%s", s2);
 					printf("\nnumber of occurence of pattern = %d\n\n", countSubstrPattern(s1, s2));
 					break;
-			case 3: printf("Enter alphabet string :");
+			case 3: printf("Enter string to be checked: ");
 					scanf("%s", s1);
-					printf("Enter string to be checked: ");
+					printf("Enter alphabet string: ");
 					scanf("%s", s2);
 					(isValidString(s1, s2) == 1) ? printf("\nString is valid!\n\n") : printf("\nString is invalid!\n\n");
 					break;
