@@ -50,5 +50,12 @@ int getMaxSkewN(char string[], int x){
 	return maxSkew;
 }
 int getMinSkewN(char s1[], int x){
-	return 0;
+	int i,g=0,c=0, minSkew;
+	for(i=0; i<x;i++){
+		if(string[i]=='G') g+=1;
+		else if(string[i]=='C') c+=1;
+
+		minSkew = (i!=0 && g-c > minSkew) ? minSkew : g-c;
+	}
+	return minSkew;	
 }
