@@ -23,7 +23,7 @@ main(){
 					printf("Enter string 2: ");
 					scanf("%s", s2);
 					ans = getHammingDistance(s1, s2);
-					(ans > 0) ? printf("\nhamming distance = %d\n\n", ans) : printf("\nError! Strings are not equal!\n\n");
+					(ans != -1) ? printf("\nhamming distance = %d\n\n", ans) : printf("\nError! Strings are not equal!\n\n");
 					break;
 			case 2: printf("Enter original string: ");
 					scanf("%s", s1);
