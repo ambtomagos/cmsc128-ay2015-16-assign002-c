@@ -13,9 +13,18 @@ int getHammingDistance(char string1[], char string2[]){
 		return count;
 	}
 }
-int countSubstrPattern(char s1[], char s2[]){
-	return 0;
-}
+int countSubstrPattern(char string1[], char string2[]){
+	int count = 0;
+	char *p = string1;
+	while(p = strstr(p, string2))
+	{
+	   count+=1;
+	   p+=1;
+
+	}
+
+	return count;
+} 
 int isValidString(char s1[], char s2[]){
 	int i, j, flag=0;
 
@@ -49,7 +58,7 @@ int getMaxSkewN(char string[], int x){
 	}
 	return maxSkew;
 }
-int getMinSkewN(char s1[], int x){
+int getMinSkewN(char string[], int x){
 	int i,g=0,c=0, minSkew;
 	for(i=0; i<x;i++){
 		if(string[i]=='G') g+=1;
