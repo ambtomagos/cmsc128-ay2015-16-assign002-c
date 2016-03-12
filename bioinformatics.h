@@ -39,9 +39,16 @@ int getSkew(char string[], int x){
 	}
 	return g-c;
 }
-int getMaxSkewN(char s1[], int x){
-	return 0;
+int getMaxSkewN(char string[], int x){
+	int i,g=0,c=0, maxSkew;
+	for(i=0; i<x;i++){
+		if(string[i]=='G') g+=1;
+		else if(string[i]=='C') c+=1;
+
+		maxSkew = (i!=0 && g-c < maxSkew) ? maxSkew : g-c;
+	}
+	return maxSkew;
 }
 int getMinSkewN(char s1[], int x){
-	return 0;	
+	return 0;
 }
